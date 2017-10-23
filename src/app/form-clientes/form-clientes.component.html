@@ -1,0 +1,25 @@
+<h2>Formulário Clientes</h2>
+<div class="form">
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome"
+        [(ngModel)]="cliente.nome"/>
+        
+        <label for="email">E-mail:</label>
+        <input type="text" name="email" id="email" placeholder="E-mail"
+        [(ngModel)]="cliente.email"/>
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="text" name="nascimento" id="nascimento" placeholder="DD/MM/AA"
+        [(ngModel)]="cliente.nascimento"/>
+
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" id="rg" placeholder="RG" [(ngModel)]="cliente.rg"/>
+
+        <div class="buttons">
+            <input type="button" (click)="salvarCliente()" value="Salvar"/>
+            <input type="button" (click)="voltar()" value="Voltar"/>
+        </div>
+    </form>
+    
+</div>

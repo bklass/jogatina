@@ -1,0 +1,43 @@
+<h2>Lista de Jogos</h2>
+
+<table>
+    <tr>
+        <th>
+            Código
+        </th>
+        <th>
+            Título
+        </th>
+        <th>
+            Editora
+        </th>
+        <th>
+            Ano de Lançamento
+        </th>
+        <th>
+            Qtd Jogadores
+        </th>
+        <th>
+            Idade Recomendada
+        </th>
+        <th>
+            Estoque
+        </th>
+        <th>
+            Duração Média
+        </th>
+    </tr>
+    <tr *ngFor='let jogo of jogos'>
+        <td>{{jogo.codigo}}</td>
+        <td>{{jogo.titulo}}</td>
+        <td>{{jogo.editora}}</td>
+        <td>{{jogo.anoLancamento}}</td>
+        <td>{{jogo.qtdJogadores}}</td>
+        <td>{{jogo.idadeRec}}</td>
+        <td>{{jogo.estoque}}</td>
+        <td>{{jogo.duracao}}</td>
+        <td><a [routerLink]="['/edicaoJogo', jogo.codigo]">Editar</a> </td>
+        <td><a routerLink="/listaJogo" (click)="remover(jogo)">Deletar</a></td>
+    </tr>
+</table>
+<a routerLink="/novoJogo">Novo Jogo</a>

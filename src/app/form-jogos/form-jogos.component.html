@@ -1,0 +1,39 @@
+<h2>Formulário Jogos</h2>
+<div class="form">
+    <form>
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" id="titulo" placeholder="Título"
+        [(ngModel)]="jogo.titulo"/>
+        
+        <label for="editora">Editora:</label>
+        <input type="text" name="editora" id="editora" placeholder="Editora"
+        [(ngModel)]="jogo.editora"/>
+        
+        <label for="anoLancamento">Ano de Lançamento:</label>
+        <input type="text" name="anoLancamento" id="anoLancamento" placeholder="YYYY"
+        [(ngModel)]="jogo.anoLancamento"/>
+        
+        <label for="qtdJogadores">Quantidade de Jogadores:</label>
+        <input type="text" name="qtdJogadores" id="qtdJogadores" placeholder="2 - 6"
+        [(ngModel)]="jogo.qtdJogadores"/>
+        
+        <label for="idadeRec">Idade Recomendada:</label>
+        <input type="text" name="idadeRec" id="idadeRec" placeholder="12+"
+        [(ngModel)]="jogo.idadeRec"/>
+        
+        <label for="estoque">Em Estoque:</label>
+        <input type="text" name="estoque" id="estoque" placeholder="2"
+        [(ngModel)]="jogo.estoque"/>
+        
+        <label for="duracao">Duração média:</label>
+        <input type="text" name="duracao" id="duracao" placeholder="90 min"
+        [(ngModel)]="jogo.duracao"/>
+        
+      
+        <div class="buttons">
+            <input type="button" (click)="salvarJogo()" value="Salvar"/>
+            <input type="button" (click)="voltar()" value="Voltar"/>
+        </div>
+    </form>
+    
+</div>

@@ -1,0 +1,20 @@
+<h2>Formulário de Mesas</h2>
+<div class="form">
+    <form>
+        <label for="dtInicio">Data Início:</label>
+        <input type="text" name="dtInicio" id="dtInicio" placeholder="DD/MM/AA hh:mm"
+        [(ngModel)]="mesa.dtInicio"/>
+        
+        <label for="dtFim">Data Fim:</label>
+        <input type="text" name="dtFim" id="dtFim" placeholder="DD/MM/AA hh:mm"
+        [(ngModel)]="mesa.dtFim"/>
+
+
+
+        <div class="buttons">
+            <input type="button" (click)="salvarMesa()" value="Salvar"/>
+            <input type="button" (click)="voltar()" value="Voltar"/>
+        </div>
+    </form>
+    
+</div>

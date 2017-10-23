@@ -1,0 +1,26 @@
+<h2>Lista de Mesas</h2>
+
+<table>
+    <tr>
+        <th>
+            Código
+        </th>
+        <th>
+            Data Início
+        </th>
+        <th>
+            Data Fim
+        </th>
+    
+    </tr>
+    <tr *ngFor='let mesa of mesas'>
+        <td>{{mesa.codigo}}</td>
+        <td>{{mesa.dtInicio}}</td>
+        <td>{{mesa.dtFim}}</td>
+
+        <td><a [routerLink]="['/edicaoMesa', mesa.codigo]">Editar</a> </td>
+        <td><a routerLink="/listaMesa" (click)="remover(mesa)">Deletar</a></td>
+    </tr>
+</table>
+<a routerLink="/novaMesa">Nova Mesa</a>
+
